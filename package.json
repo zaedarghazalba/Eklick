@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^7.2.0",
+        "@playwright/test": "^1.60.0",
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0",
+        "vite": "^5.0"
+    },
+    "dependencies": {
+        "@srexi/purecounterjs": "^1.5.0",
+        "glightbox": "^3.3.1",
+        "sweetalert2": "^11.15.0",
+        "swiper": "^12.1.4"
+    },
+    "name": "eklick",
+    "version": "1.0.0",
+    "description": "Aplikasi web untuk manajemen antrian klinik dengan 3 role: Pasien, Admin, dan Dokter.",
+    "main": "vite.config.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zaedarghazalba/Eklick.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zaedarghazalba/Eklick/issues"
+    },
+    "homepage": "https://github.com/zaedarghazalba/Eklick#readme"
+}

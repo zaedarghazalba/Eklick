@@ -1,0 +1,179 @@
+/**
+ * Custom Layout CSS - Eklick
+ * Fix untuk spacing header dan konten
+ */
+
+/* ==============================================
+   USER PAGES - Fixed Header Spacing
+   ============================================== */
+
+/* Body padding untuk topbar + navbar */
+body {
+  padding-top: 140px !important;
+  /* Topbar: ~40px + Navbar: ~70px + Extra: 30px = 140px */
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+  body {
+    padding-top: 120px !important;
+    /* Slightly less on mobile */
+  }
+}
+
+/* Ensure main content is below navbar */
+#main,
+main {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 140px);
+}
+
+/* First section adjustment */
+section:first-of-type,
+.section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ==============================================
+   HERO SECTION FIX
+   ============================================== */
+
+/* Hero section yang full height */
+#hero {
+  margin-top: -140px;
+  /* Negative margin to offset body padding */
+  padding-top: 140px;
+  /* Add padding back to content */
+  min-height: 100vh;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+/* ==============================================
+   CONTENT SECTIONS
+   ============================================== */
+
+/* Prevent content from hiding behind navbar */
+.content-section {
+  clear: both;
+  position: relative;
+}
+
+/* Section with title */
+.section-title {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* ==============================================
+   SCROLL BEHAVIOR
+   ============================================== */
+
+/* Smooth scroll offset for anchor links */
+html {
+  scroll-padding-top: 140px;
+  scroll-behavior: smooth;
+}
+
+/* For sections with anchor links */
+section[id],
+div[id] {
+  scroll-margin-top: 140px;
+}
+
+/* ==============================================
+   FLASH MESSAGES POSITIONING
+   ============================================== */
+
+/* Ensure flash messages are visible */
+.alert.fixed-top {
+  top: 100px !important;
+  /* Below navbar */
+}
+
+/* ==============================================
+   MOBILE RESPONSIVE
+   ============================================== */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 110px !important;
+  }
+
+  html {
+    scroll-padding-top: 110px;
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: 110px;
+  }
+
+  #hero {
+    margin-top: -110px;
+    padding-top: 110px;
+  }
+}
+
+/* ==============================================
+   Z-INDEX MANAGEMENT
+   ============================================== */
+
+/* Ensure proper layering */
+.fixed-top {
+  z-index: 9998;
+}
+
+#topbar.fixed-top {
+  z-index: 9997;
+}
+
+#header.fixed-top {
+  z-index: 9998;
+}
+
+.alert.fixed-top {
+  z-index: 10000;
+}
+
+/* ==============================================
+   UTILITY CLASSES
+   ============================================== */
+
+/* No padding top (use with caution) */
+.no-body-padding {
+  padding-top: 0 !important;
+}
+
+/* Custom padding top */
+.body-padding-sm {
+  padding-top: 100px !important;
+}
+
+.body-padding-md {
+  padding-top: 140px !important;
+}
+
+.body-padding-lg {
+  padding-top: 180px !important;
+}
+
+/* Section spacing */
+.section-spacing {
+  padding: 60px 0;
+}
+
+.section-spacing-sm {
+  padding: 30px 0;
+}
+
+.section-spacing-lg {
+  padding: 100px 0;
+}

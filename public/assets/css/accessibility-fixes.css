@@ -1,0 +1,180 @@
+/**
+ * Accessibility Fixes - Color Contrast Improvements
+ *
+ * These styles override the default theme colors to meet WCAG 2.1 Level AA
+ * contrast requirements (4.5:1 for normal text, 3:1 for large text)
+ */
+
+/* Fix breadcrumbs separator contrast */
+.breadcrumbs ol li+li::before {
+  color: #595959 !important; /* Changed from #6c757d - Contrast ratio: 7.0:1 */
+}
+
+/* Fix icon box paragraph text contrast */
+.why-us .icon-boxes .icon-box p {
+  color: #595959 !important; /* Changed from #848484 - Contrast ratio: 7.0:1 */
+}
+
+/* Fix departments details text contrast */
+.departments .details p {
+  color: #595959 !important; /* Changed from #777777 - Contrast ratio: 7.0:1 */
+}
+
+/* Fix general paragraph text in sections */
+.section-bg p,
+.about p,
+.services p {
+  color: #444444 !important; /* Ensure good contrast on white background */
+}
+
+/* Fix muted text elements */
+.text-muted {
+  color: #595959 !important; /* Changed from Bootstrap default #6c757d */
+}
+
+/* Fix secondary button contrast */
+.btn-secondary {
+  background-color: #4a5568 !important; /* Darker shade for better contrast */
+  border-color: #4a5568 !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+  background-color: #2d3748 !important;
+  border-color: #2d3748 !important;
+  color: #ffffff !important;
+}
+
+/* Fix link colors for better contrast */
+a.text-muted:hover,
+a.text-muted:focus {
+  color: #2d3748 !important;
+}
+
+/* Fix light text on light backgrounds */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-light .text-muted {
+  color: #4a5568 !important;
+}
+
+/* Ensure form labels have good contrast */
+label,
+.form-label {
+  color: #212529 !important;
+  font-weight: 500;
+}
+
+/* Fix placeholder text contrast */
+::placeholder {
+  color: #6c757d !important;
+  opacity: 0.8 !important;
+}
+
+/* Fix disabled form elements */
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #e9ecef !important;
+  color: #495057 !important;
+  opacity: 1 !important;
+}
+
+/* Fix table text contrast */
+.table {
+  color: #212529 !important;
+}
+
+.table-muted {
+  color: #595959 !important;
+}
+
+/* Fix badge contrast */
+.badge.bg-secondary {
+  background-color: #4a5568 !important;
+}
+
+.badge.bg-light {
+  background-color: #e9ecef !important;
+  color: #212529 !important;
+}
+
+/* Fix alert text contrast */
+.alert {
+  color: #212529 !important;
+}
+
+.alert-warning {
+  background-color: #fff3cd !important;
+  border-color: #ffecb5 !important;
+  color: #856404 !important;
+}
+
+.alert-info {
+  background-color: #d1ecf1 !important;
+  border-color: #bee5eb !important;
+  color: #0c5460 !important;
+}
+
+/* Fix footer text contrast (if on light background) */
+footer p,
+footer a {
+  color: #212529 !important;
+}
+
+footer a:hover {
+  color: #0056b3 !important;
+}
+
+/* Fix navigation text */
+.navbar-light .navbar-nav .nav-link {
+  color: #212529 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #0056b3 !important;
+}
+
+/* Fix dropdown text */
+.dropdown-menu {
+  color: #212529 !important;
+}
+
+.dropdown-item {
+  color: #212529 !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f8f9fa !important;
+  color: #16181b !important;
+}
+
+/* Focus visible states for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #1977cc !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip to main content link (for screen readers) */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #1977cc;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
